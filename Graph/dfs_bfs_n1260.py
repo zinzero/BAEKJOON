@@ -9,7 +9,7 @@ visited_bfs = [0]*(N+1)
 
 for i in range(M):
     a, b = map(int, input().split())
-    matrix[a][b] = matrix[b][a]=1
+    matrix[a][b] = matrix[b][a] = 1
 
 def dfs(V):
     visited_dfs[V] = 1
