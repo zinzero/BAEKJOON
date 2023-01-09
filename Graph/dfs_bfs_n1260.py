@@ -1,9 +1,9 @@
 from collections import deque
 
 # 정점, 간선, 시작점
-N, M, V = list(map(int, input().split()))
+N, M, V = map(int, input().split())
 
-# 인접영행렬
+# 인접 0행렬
 matrix = [[0]*(N+1) for i in range(N+1)]
 
 # 방문한 곳 체크 리스트
