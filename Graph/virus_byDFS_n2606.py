@@ -1,9 +1,10 @@
 import sys
-sys.setrecursionlimit(10**9)    # 재귀 최대 깊이 증가
+sys.setrecursionlimit(10 ** 6)
 
-N, M, R = map(int, sys.stdin.readline().split())    # 정점, 간선, 시작정점
+N = int(sys.stdin.readline().strip())   # 정점
+M = int(sys.stdin.readline().strip())   # 간선 
 
-graph = [[] for _ in range(N + 1)]      # [[], [], [], ... , []]
+graph = [[] for _ in range(N + 1)]
 visited = [0] * (N + 1)
 count = 1
 
@@ -16,12 +17,12 @@ def dfs(V):
     global count
     visited[V] = count
     graph[V].sort()
+
     for g in graph[V]:
         if visited[g] == 0:
             count += 1
             dfs(g)
 
-dfs(R)
+dfs(1)
 
-for i in range(1, N + 1):
-    print(visited[i])
+print(count - 1)
