@@ -2,7 +2,7 @@ import sys
 sys.setrecursionlimit(10 ** 6)
 
 N = int(sys.stdin.readline().strip())   # 정점
-M = int(sys.stdin.readline().strip())   # 간선 
+M = int(sys.stdin.readline().strip())   # 간선
 
 graph = [[] for _ in range(N + 1)]
 visited = [0] * (N + 1)
